@@ -24,9 +24,9 @@ The WiFi Air Quality App uses an Adafruit CCS811 Air Quality Sensor to take read
 ----
 
 ### WiFi Air Quality App Description
-App & Device can be used to monitor weather conditions in agricultural, industrial or commercial applications and can be expanded to monitor numerous other types of data according to the need of the client, market and by sensors available. 
+App & Device can be used to monitor indoor air quality conditions in agricultural, industrial or commercial applications and can be expanded to monitor numerous other types of data according to the need of the clients, market and or by sensors applied to the application. 
 
-Project is to measure the temperature and humidity in real time with sensors and then transmit the data via WiFi to Firebase, a real-time cloud database, and then display the data with various web technologies in a website interface.
+Project is to measure the Carbon Dioxide (eCO2) readings and Volatile Organic Compounds (VOCs) readings in real time with sensors and then transmit the data via WiFi to Firebase, a real-time cloud database, and then display the data using a React.JS website interface in real time.
 
 
 ----
@@ -49,11 +49,11 @@ Parts Used
 
   - Adafruit CCS811 Air Quality Sensor Breakout Board - VOC and eCO2  ![@ Adafruit](https://www.adafruit.com/product/3566)
  
-
+----
 
 ### Schematic of Layout
 
-
+----
 
 ### Code Used for Programming Hardware
 Code used for programming the Adafruit Feather HUZZAH ESP8266 board is located in the directory  [feather_huzzah_esp8266_code](https://github.com/DKMitt/wifi-react-air-quality/tree/master/feather_huzzah_esp8266_code). 
