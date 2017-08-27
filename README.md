@@ -5,7 +5,7 @@ A WiFi Air Quality App with Data Logging intended for indoor air quality monitor
 The WiFi Air Quality App uses an Adafruit CCS811 Air Quality Sensor to take readings in real time and then transmit the data wirelessly via WiFi with the Adafruit Feather HUZZAH ESP8266 WiFi Development Board to a Firebase real-time cloud database, and then displaying the results using a React.js website interface.
 
 
-### Project Status - In Process - Starting, 8/25/2017
+### Project Status - In Process - Started, 8/25/2017 - Updated, 8/26/2017
 
 ----
 
@@ -14,7 +14,7 @@ The WiFi Air Quality App uses an Adafruit CCS811 Air Quality Sensor to take read
   -  WiFi Air Quality App Description
   -  Features to Have 
   -  Hardware Used for Project
-  -  Schematic of Layout
+  -  Schematic of Hardware Layout
   -  Code Used for Programming Hardware
   -  Website Technologies 
   -  How to Use This App
@@ -49,9 +49,13 @@ Parts Used
 
   - Adafruit CCS811 Air Quality Sensor Breakout Board - VOC and eCO2  ![@ Adafruit](https://www.adafruit.com/product/3566)
  
+![WiFi Air Quality App Breadboard Layout](public/assets/img/esp8266-ccs811+batlev.jpg) 
+ 
 ----
 
-### Schematic of Layout
+### Schematic of Hardware Layout
+
+![WiFi Air Quality App Schematic](public/assets/img/esp8266-ccs811+batlev-sch.jpg)
 
 ----
 
