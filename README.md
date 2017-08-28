@@ -5,7 +5,7 @@ A WiFi Air Quality App with Data Logging intended for indoor air quality monitor
 The WiFi Air Quality App uses an Adafruit CCS811 Air Quality Sensor to take readings in real time and then transmit the data wirelessly via WiFi with the Adafruit Feather HUZZAH ESP8266 WiFi Development Board to a Firebase real-time cloud database, and then displaying the results using a React.js website interface.
 
 
-### Project Status - In Process - Started, 8/25/2017 - Updated, 8/26/2017
+__Project Status - In Process - Started, 8/25/2017 - Updated, 8/27/2017__
 
 ----
 
@@ -28,7 +28,6 @@ App & Device can be used to monitor indoor air quality conditions in agricultura
 
 Project is to measure the Carbon Dioxide (eCO2) readings and Volatile Organic Compounds (VOCs) readings in real time with sensors and then transmit the data via WiFi to Firebase, a real-time cloud database, and then display the data using a React.JS website interface in real time.
 
-
 ----
 
 ### Features to Have:
@@ -36,19 +35,20 @@ Project is to measure the Carbon Dioxide (eCO2) readings and Volatile Organic Co
 - Viewable results by a React.JS website interface
 - Real time Carbon Dioxide (eCO2) and Volatile Organic Compounds (VOCs) monitoring as polled from sensor 
 - Battery powered, portable device
-
+- Battery voltage level indicator
 
 ----
 
 ### Hardware Used for Project
 
-Parts Used
+__Parts List__
 
-  - Adafruit Feather HUZZAH ESP8266 WiFi Development Board with built in USB and battery charging  ![@ Adafruit](https://www.adafruit.com/product/2821)
-
-
-  - Adafruit CCS811 Air Quality Sensor Breakout Board - VOC and eCO2  ![@ Adafruit](https://www.adafruit.com/product/3566)
+- (1) Adafruit Feather HUZZAH ESP8266 WiFi Development Board with built in USB and battery charging  [Get @ Adafruit](https://www.adafruit.com/product/2821)
+- (1) Adafruit CCS811 Air Quality Sensor Breakout Board - VOC and eCO2  [Get @ Adafruit](https://www.adafruit.com/product/3566)
+- (1) 220K Ohm Resistor, 5%, 1/4 watt, Color code: Red, Red, Yellow, Gold
+- (1) 1M Ohm Resistor, 5%, 1/4 watt, Color code: Brown, Black, Green, Gold
  
+__Breadboard Layout__
 ![WiFi Air Quality App Breadboard Layout](public/assets/img/esp8266-ccs811+batlev.jpg) 
  
 ----
@@ -61,13 +61,13 @@ Parts Used
 
 ### Code Used for Programming Hardware
 Code used for programming the Adafruit Feather HUZZAH ESP8266 board is located in the directory  [feather_huzzah_esp8266_code](https://github.com/DKMitt/wifi-react-air-quality/tree/master/feather_huzzah_esp8266_code). 
+  
 
-* __Definition of Code__
+__Definition of Code__
 
-  * 
-  * 
-  * 
-	
+  * [esp8266_ccs811.ino](https://github.com/DKMitt/wifi_ws/blob/master/feather_huzzah_esp8266_code/esp8266_ccs811.ino)  -  Used to test hardware is setup correctly, sends data to serial monitor - In Process of Coding 8/27/2017
+
+
 ----
 
 ### Website Technologies
@@ -88,7 +88,7 @@ Babel with ES6 and extensions used by Facebook (JSX, object spread, class proper
 
 - All of them are transitive dependencies of the provided npm package.
 
-#### Dependecies
+__Dependecies__
     firebase: 4.1.3,
     react: 15.6.1,
     react-dom: 15.6.1,
@@ -118,7 +118,7 @@ To start the app use the following command
 .
 ├── feather_huzzah_esp8266_code
 │   │
-│   └── 
+│   └── esp8266_ccs811.ino
 │ 
 ├── public
 │   │
@@ -126,7 +126,9 @@ To start the app use the following command
 │   │   │
 │   │   └── img
 │   │       │
-│   │       └── 
+│   │       ├── esp8266-ccs811+batlev.jpg
+│   │       │
+│   │       └── esp8266-ccs811+batlev-sch.jpg
 │   │
 │   ├── favicon.ico
 │   │
@@ -165,16 +167,15 @@ To start the app use the following command
 ----
 ### Revision History 
 
-Description of revisions made to the app - In Process, last updated 8/25/2017
+Description of revisions made to the app - In Process, last updated 8/26/2017
 
-  - [ ]  hardware layout - 
-  - [ ]  hardware prototype assembly - 
-  - [ ]  hardware coding & embedding - 
-  - [ ]  cloud database creation - 
-  - [ ]  configure to send data to database - 
-  - [ ]  testing data sending to database - 
-  - [ ]  file and directory structure creation  - 
-  - [ ]  website wire framing - 
-  - [ ]  website coding - 
-  - [ ]  file and directory structure cleanup - 
-  - [ ]  final testing - 
+  - [x]  Hardware / Dev - Breadboard Layout & Schematic - 8/26/2017  
+  - [x]  Dev - file and directory structure creation  - 8/26/2017
+  - [x]  Dev - Firebase cloud database creation - 8/26/2017
+  - [ ]  Dev - website wire framing -
+  - [ ]  Hardware - hardware assembly - 
+  - [ ]  Hardware / Dev - hardware coding & embedding - 
+  - [ ]  Hardware - configure & test to send data to Firebase database -    
+  - [ ]  Dev - website coding - 
+  - [ ]  Dev - file and directory structure cleanup - 
+  - [ ]  Dev - final testing - 
