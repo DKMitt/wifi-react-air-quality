@@ -63,7 +63,7 @@ __<u>Breadboard Layout</u>__
 Code used for programming the Adafruit Feather HUZZAH ESP8266 board is located in the directory  [feather_huzzah_esp8266_code](https://github.com/DKMitt/wifi-react-air-quality/tree/master/feather_huzzah_esp8266_code). 
 
 
-__Definition of Code__
+__<u>Definition of Code</u>__
 
   * [esp8266_ccs811.ino](https://github.com/DKMitt/wifi_ws/blob/master/feather_huzzah_esp8266_code/esp8266_ccs811.ino)  -  Used to test hardware is setup correctly, sends data to serial monitor - In Process of Coding 8/27/2017
 
