@@ -20,7 +20,7 @@ __Project Status - In Process - Started, 8/25/2017 - Updated, 8/27/2017__
   -  How to Use This App
   -  File and Directory Structure
   -  Revision History
-  
+
 ----
 
 ### WiFi Air Quality App Description
@@ -41,16 +41,16 @@ Project is to measure the Carbon Dioxide (eCO2) readings and Volatile Organic Co
 
 ### Hardware Used for Project
 
-__Parts List__
+__<u>Parts List</u>__
 
 - (1) Adafruit Feather HUZZAH ESP8266 WiFi Development Board with built in USB and battery charging  [Get @ Adafruit](https://www.adafruit.com/product/2821)
 - (1) Adafruit CCS811 Air Quality Sensor Breakout Board - VOC and eCO2  [Get @ Adafruit](https://www.adafruit.com/product/3566)
 - (1) 220K Ohm Resistor, 5%, 1/4 watt, Color code: Red, Red, Yellow, Gold
 - (1) 1M Ohm Resistor, 5%, 1/4 watt, Color code: Brown, Black, Green, Gold
- 
-__Breadboard Layout__
+
+__<u>Breadboard Layout</u>__
 ![WiFi Air Quality App Breadboard Layout](public/assets/img/esp8266-ccs811+batlev.jpg) 
- 
+
 ----
 
 ### Schematic of Hardware Layout
@@ -61,7 +61,7 @@ __Breadboard Layout__
 
 ### Code Used for Programming Hardware
 Code used for programming the Adafruit Feather HUZZAH ESP8266 board is located in the directory  [feather_huzzah_esp8266_code](https://github.com/DKMitt/wifi-react-air-quality/tree/master/feather_huzzah_esp8266_code). 
-  
+
 
 __Definition of Code__
 
@@ -78,7 +78,7 @@ Description of website technologies used to develop this app.
 - REACT.JS based using [create-react-app](https://github.com/facebookincubator/create-react-app), currently it is a thin layer on top of many amazing community projects, such as:
 
 - webpack with webpack-dev-server, html-webpack-plugin and style-loader
-Babel with ES6 and extensions used by Facebook (JSX, object spread, class properties)
+  Babel with ES6 and extensions used by Facebook (JSX, object spread, class properties)
 
 - Autoprefixer
 
@@ -88,13 +88,13 @@ Babel with ES6 and extensions used by Facebook (JSX, object spread, class proper
 
 - All of them are transitive dependencies of the provided npm package.
 
-__Dependecies__
+__<u>Dependecies</u>__
     firebase: 4.1.3,
     react: 15.6.1,
     react-dom: 15.6.1,
     react-router: 4.1.1,
     react-router-dom: 4.1.1
-    
+
 ----
 
 
@@ -107,7 +107,6 @@ To start the app use the following command
   "npm start"   - this Runs the app in development mode.
 
   Open http://localhost:3000 to view it in the browser.
-
 
 ----
 
@@ -169,13 +168,13 @@ To start the app use the following command
 
 Description of revisions made to the app - In Process, last updated 8/26/2017
 
-  - [x]  Hardware / Dev - Breadboard Layout & Schematic - 8/26/2017  
-  - [x]  Dev - file and directory structure creation  - 8/26/2017
-  - [x]  Dev - Firebase cloud database creation - 8/26/2017
-  - [ ]  Dev - website wire framing -
-  - [ ]  Hardware - hardware assembly - 
-  - [ ]  Hardware / Dev - hardware coding & embedding - 
-  - [ ]  Hardware - configure & test to send data to Firebase database -    
-  - [ ]  Dev - website coding - 
-  - [ ]  Dev - file and directory structure cleanup - 
-  - [ ]  Dev - final testing - 
+  - [x] Hardware / Dev - Breadboard Layout & Schematic - 8/26/2017  
+  - [x] Dev - file and directory structure creation  - 8/26/2017
+  - [x] Dev - Firebase cloud database creation - 8/26/2017
+  - [ ] Dev - website wire framing -
+  - [ ] Hardware - hardware assembly - 
+  - [ ] Hardware / Dev - hardware coding & embedding - 
+  - [ ] Hardware - configure & test to send data to Firebase database -    
+  - [ ] Dev - website coding - 
+  - [ ] Dev - file and directory structure cleanup - 
+  - [ ] Dev - final testing - 
