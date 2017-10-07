@@ -5,7 +5,7 @@ A WiFi Air Quality App with Data Logging intended for indoor air quality monitor
 The WiFi Air Quality App uses an Adafruit CCS811 Air Quality Sensor to take readings in real time and then transmit the data wirelessly via WiFi with the Adafruit Feather HUZZAH ESP8266 WiFi Development Board to a Firebase real-time cloud database, and then displaying the results using a React.js website interface.
 
 
-__Project Status - In Process - Started, 8/25/2017 - Updated, 8/27/2017__
+__Project Status - In Process - Started, 8/25/2017 - Updated, 10/06/2017__
 
 ----
 
@@ -63,10 +63,13 @@ __<u>Breadboard Layout</u>__
 Code used for programming the Adafruit Feather HUZZAH ESP8266 board is located in the directory  [feather_huzzah_esp8266_code](https://github.com/DKMitt/wifi-react-air-quality/tree/master/feather_huzzah_esp8266_code). 
 
 
+
 __<u>Definition of Code</u>__
 
-  * [esp8266_ccs811.ino](https://github.com/DKMitt/wifi_ws/blob/master/feather_huzzah_esp8266_code/esp8266_ccs811.ino)  -  Used to test hardware is setup correctly, sends data to serial monitor - In Process of Coding 8/27/2017
-
+  * [esp8266_ccs811_test.ino](https://github.com/DKMitt/wifi_ws/blob/master/feather_huzzah_esp8266_code/esp8266_ccs811_test.ino)  -  Used to test hardware is setup correctly, sends data to serial monitor - Pulled code from Adafruit website with driver 
+  
+  * [esp8266_ccs811.ino](https://github.com/DKMitt/wifi_ws/blob/master/feather_huzzah_esp8266_code/esp8266_ccs811.ino)  -  Used to test hardware and Firebase Database are setup correctly, sends data to serial monitor and to Firebase database - In Process of Coding 10/08/2017
+  
 
 ----
 
@@ -117,7 +120,9 @@ To start the app use the following command
 .
 ├── feather_huzzah_esp8266_code
 │   │
-│   └── esp8266_ccs811.ino
+│   ├── esp8266_ccs811.ino
+│   │
+│   └── esp8266_ccs811_test.ino
 │ 
 ├── public
 │   │
@@ -166,7 +171,7 @@ To start the app use the following command
 ----
 ### Revision History 
 
-Description of revisions made to the app - In Process, last updated 8/26/2017
+Description of revisions made to the app - In Process, last updated 10/7/2017
 
   - [x] Hardware / Dev - Breadboard Layout & Schematic - 8/26/2017  
   - [x] Dev - file and directory structure creation  - 8/26/2017
