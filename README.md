@@ -49,6 +49,7 @@ __<u>Parts List</u>__
 - (1) 1M Ohm Resistor, 5%, 1/4 watt, Color code: Brown, Black, Green, Gold
 
 __<u>Breadboard Layout</u>__
+
 ![WiFi Air Quality App Breadboard Layout](public/assets/img/esp8266-ccs811+batlev.jpg) 
 
 ----
