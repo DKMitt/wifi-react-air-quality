@@ -52,5 +52,5 @@ void loop() {
       while(1);
     }
   }
-  delay(500);
+  delay(1000);
 }

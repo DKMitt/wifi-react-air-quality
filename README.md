@@ -66,24 +66,29 @@ __<u>Breadboard Layout</u>__
 Code used for programming the Adafruit Feather HUZZAH ESP8266 board is located in the directory  [feather_huzzah_esp8266_code](https://github.com/DKMitt/wifi-react-air-quality/tree/master/feather_huzzah_esp8266_code). 
 
 
-
-__<u>Source for Code & Wiring </u>__
-
-  * [Adafruit CCS811 Air Quality Sensor Overview](https://learn.adafruit.com/adafruit-ccs811-air-quality-sensor/raspberry-pi-wiring-and-test?view=all)
-  * [Arduino Wiring & Test](https://learn.adafruit.com/adafruit-ccs811-air-quality-sensor/wiring-and-test)
-  * [Adafruit CCS811 Air Quality Sensor Downloads](https://learn.adafruit.com/adafruit-ccs811-air-quality-sensor?view=all#downloads)
-  * [Download Adafruit_CCS811 library](https://learn.adafruit.com/adafruit-ccs811-air-quality-sensor?view=all#download-adafruit-ccs811-library) - To begin reading sensor data, you will need to download Adafruit_CCS811 library, read more on how to do that here and download link.
-  * [Adafruit_feather HUZZAH ESP8266 Overview](https://learn.adafruit.com/adafruit-feather-huzzah-esp8266/pinouts?view=all#overview) - Covers working with the Adafruit feather HUZZAH EDP8266, pinout, wiring, programing, the battery voltage divider used here and more.
-  * [Using Arduino IDE to Program the Adafruit_feather HUZZAH ESP8266](https://learn.adafruit.com/adafruit-feather-huzzah-esp8266/pinouts?view=all#using-arduino-ide) 
-
-
-
-
 __<u>Definition of Code</u>__
 
   * [esp8266_ccs811_test.ino](https://github.com/DKMitt/wifi-react-air-quality/blob/master/feather_huzzah_esp8266_code/esp8266_ccs811_test.ino)  -  Used to test hardware is setup correctly, sends data to serial monitor - Get code from within Arduino IDE by going to: __File->Examples->Adafruit_CCS811->CCS811_test__ 
 
+    You should get the below output to your serial monitor
+    ​
+    ![Serail Monitor Output with Test Code](public/assets/img/ccs811-test-results-600.jpg)
+    ​
+
   * [esp8266_ccs811.ino](https://github.com/DKMitt/wifi-react-air-quality/blob/master/feather_huzzah_esp8266_code/esp8266_ccs811.ino)  -  Used to test hardware and Firebase Database are setup correctly, sends data to serial monitor and to Firebase database - In Process of Coding 12/16/2017
+
+
+
+
+__<u>Source for Code & Wiring</u>__
+
+- [Adafruit CCS811 Air Quality Sensor Overview](https://learn.adafruit.com/adafruit-ccs811-air-quality-sensor/raspberry-pi-wiring-and-test?view=all)
+- [Arduino Wiring & Test](https://learn.adafruit.com/adafruit-ccs811-air-quality-sensor/wiring-and-test)
+- [Adafruit CCS811 Air Quality Sensor Downloads](https://learn.adafruit.com/adafruit-ccs811-air-quality-sensor?view=all#downloads)
+- [Download Adafruit_CCS811 library](https://learn.adafruit.com/adafruit-ccs811-air-quality-sensor?view=all#download-adafruit-ccs811-library) - To begin reading sensor data, you will need to download Adafruit_CCS811 library, read more on how to do that here and download link.
+- [Adafruit_feather HUZZAH ESP8266 Overview](https://learn.adafruit.com/adafruit-feather-huzzah-esp8266/pinouts?view=all#overview) - Covers working with the Adafruit feather HUZZAH ESP8266, pinout, wiring, programing, the battery voltage divider used here and more.
+- [Using Arduino IDE to Program the Adafruit_feather HUZZAH ESP8266](https://learn.adafruit.com/adafruit-feather-huzzah-esp8266/pinouts?view=all#using-arduino-ide) - How to program the Adafruit feather HUZZAH ESP8266
+
 
 
 ----
@@ -105,6 +110,7 @@ Description of website technologies used to develop this app.
 - ESLint
 
 - All of them are transitive dependencies of the provided npm package.
+  ​
 
 __<u>Dependecies</u>__
     firebase: 4.1.3,
