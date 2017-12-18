@@ -5,7 +5,7 @@ A WiFi Air Quality App with Data Logging intended for indoor air quality monitor
 The WiFi Air Quality App uses an Adafruit CCS811 Air Quality Sensor to take readings in real time and then transmit the data wirelessly via WiFi with the Adafruit Feather HUZZAH ESP8266 WiFi Development Board to a Firebase real-time cloud database, and then displaying the results using a React.js website interface.
 
 
-__Project Status - In Process - Started, 8/25/2017 - Updated, 12/16/2017__
+__Project Status - In Process - Updated, 12/18/2017__
 
 ----
 
@@ -47,6 +47,7 @@ __<u>Parts List</u>__
 - (1) Adafruit CCS811 Air Quality Sensor Breakout Board - VOC and eCO2  [Get @ Adafruit](https://www.adafruit.com/product/3566)
 - (1) 220K Ohm Resistor, 5%, 1/4 watt, Color code: Red, Red, Yellow, Gold
 - (1) 1M Ohm Resistor, 5%, 1/4 watt, Color code: Brown, Black, Green, Gold
+  ​
 
 
 
@@ -66,6 +67,7 @@ __<u>Breadboard Layout</u>__
 Code used for programming the Adafruit Feather HUZZAH ESP8266 board is located in the directory  [feather_huzzah_esp8266_code](https://github.com/DKMitt/wifi-react-air-quality/tree/master/feather_huzzah_esp8266_code). 
 
 
+
 __<u>Definition of Code</u>__
 
   * [esp8266_ccs811_test.ino](https://github.com/DKMitt/wifi-react-air-quality/blob/master/feather_huzzah_esp8266_code/esp8266_ccs811_test.ino)  -  Used to test hardware is setup correctly, sends data to serial monitor - Get code from within Arduino IDE by going to: __File->Examples->Adafruit_CCS811->CCS811_test__ 
@@ -75,7 +77,7 @@ __<u>Definition of Code</u>__
     ![Serail Monitor Output with Test Code](public/assets/img/ccs811-test-results-600.jpg)
     ​
 
-  * [esp8266_ccs811.ino](https://github.com/DKMitt/wifi-react-air-quality/blob/master/feather_huzzah_esp8266_code/esp8266_ccs811.ino)  -  Used to test hardware and Firebase Database are setup correctly, sends data to serial monitor and to Firebase database - In Process of Coding 12/16/2017
+  * [esp8266_ccs811.ino](https://github.com/DKMitt/wifi-react-air-quality/blob/master/feather_huzzah_esp8266_code/esp8266_ccs811.ino)  -  Used to test hardware and Firebase Database are setup correctly, sends data to serial monitor and to Firebase database - In Process of Coding 12/18/2017
 
 
 
@@ -88,7 +90,6 @@ __<u>Source for Code & Wiring</u>__
 - [Download Adafruit_CCS811 library](https://learn.adafruit.com/adafruit-ccs811-air-quality-sensor?view=all#download-adafruit-ccs811-library) - To begin reading sensor data, you will need to download Adafruit_CCS811 library, read more on how to do that here and download link.
 - [Adafruit_feather HUZZAH ESP8266 Overview](https://learn.adafruit.com/adafruit-feather-huzzah-esp8266/pinouts?view=all#overview) - Covers working with the Adafruit feather HUZZAH ESP8266, pinout, wiring, programing, the battery voltage divider used here and more.
 - [Using Arduino IDE to Program the Adafruit_feather HUZZAH ESP8266](https://learn.adafruit.com/adafruit-feather-huzzah-esp8266/pinouts?view=all#using-arduino-ide) - How to program the Adafruit feather HUZZAH ESP8266
-
 
 
 ----
@@ -151,7 +152,9 @@ To start the app use the following command
 │   │   │
 │   │   └── img
 │   │       │
-│   │       ├── esp8266-ccs811+batlev.jpg
+│   │       ├── ccs811-test-results-600.jpg
+│   │       │
+│   │       ├── esp8266-ccs811+batlev.jpg ccs811-test-results-600.jpg
 │   │       │
 │   │       └── esp8266-ccs811+batlev-sch.jpg
 │   │
@@ -192,13 +195,13 @@ To start the app use the following command
 ----
 ### Revision History 
 
-Description of revisions made to the app - __In Process, last updated 12/16/2017__
+Description of revisions made to the app - __In Process, last updated 12/18/2017__
 
   - [x] Hardware / Dev - Breadboard Layout & Schematic - 8/26/2017  
   - [x] Dev - file and directory structure creation  - 8/26/2017
   - [x] Dev - Firebase cloud database creation - 8/26/2017
-  - [x] Hardware - hardware assembly -  12/16/2017
-  - [x] Hardware / Dev - hardware Test coding - 12/16/2017
+  - [x] Hardware - hardware assembly -  12/18/2017
+  - [x] Hardware / Dev - hardware Test coding - 12/18/2017
   - [ ] Hardware / Dev - hardware coding & test to send data to Firebase database - 
   - [ ] Dev - website wire framing -
   - [ ] Dev - website coding - 
