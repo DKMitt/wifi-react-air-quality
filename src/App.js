@@ -11,7 +11,7 @@ class App extends Component {
           <h2>WiFi React.JS Air Quality App with Data Logging</h2>
         </div>
         <p className="App-intro">
-          New Project, Started 8/25/2017
+          New Project, Updated 12/18/2017
         </p>
       </div>
     );
