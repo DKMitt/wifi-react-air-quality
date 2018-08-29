@@ -5,7 +5,7 @@ A WiFi Air Quality App with Data Logging intended for indoor air quality monitor
 The WiFi Air Quality App uses an Adafruit CCS811 Air Quality Sensor to take readings in real time and then transmit the data wirelessly via WiFi with the Adafruit Feather HUZZAH ESP8266 WiFi Development Board to a Firebase real-time cloud database, and then displaying the results using a React.js website interface.
 
 
-__Project Status - In Process - Updated, 12/18/2017__
+__Project Status - In Process - Updated, 08/28/2018__
 
 ----
 
@@ -77,7 +77,7 @@ __<u>Definition of Code</u>__
     ![Serail Monitor Output with Test Code](public/assets/img/ccs811-test-results-600.jpg)
     ​
 
-  * [esp8266_ccs811.ino](https://github.com/DKMitt/wifi-react-air-quality/blob/master/feather_huzzah_esp8266_code/esp8266_ccs811.ino)  -  Used to test hardware and Firebase Database are setup correctly, sends data to serial monitor and to Firebase database - In Process of Coding 12/18/2017
+  * [esp8266_ccs811.ino](https://github.com/DKMitt/wifi-react-air-quality/blob/master/feather_huzzah_esp8266_code/esp8266_ccs811.ino)  -  Used to test hardware and Firebase Database are setup correctly, sends data to serial monitor and to Firebase database - Incomplete - In Process of Coding 8/28/2018
 
 
 
@@ -113,12 +113,18 @@ Description of website technologies used to develop this app.
 - All of them are transitive dependencies of the provided npm package.
   ​
 
-__<u>Dependecies</u>__
-    firebase: 4.1.3,
-    react: 15.6.1,
-    react-dom: 15.6.1,
-    react-router: 4.1.1,
-    react-router-dom: 4.1.1
+__<u>Dependencies</u>__
+
+    firebase: ^5.4.1
+    istanbul-lib-hook: ^2.0.1
+    react: ^15.6.1
+    react-dom: ^15.6.1
+    react-router: ^4.1.1
+    react-router-dom: ^4.1.1
+
+__<u>devDependencies</u>__
+
+    react-scripts: ^1.1.5
 
 ----
 
@@ -190,12 +196,14 @@ To start the app use the following command
 │
 ├── package.json
 │
+├── package-lock.json
+│
 └── README.md            
 ```
 ----
 ### Revision History 
 
-Description of revisions made to the app - __In Process, last updated 12/18/2017__
+Description of revisions made to the app - __In Process, last updated 8/28/2018__
 
   - [x] Hardware / Dev - Breadboard Layout & Schematic - 8/26/2017  
   - [x] Dev - file and directory structure creation  - 8/26/2017
@@ -203,6 +211,7 @@ Description of revisions made to the app - __In Process, last updated 12/18/2017
   - [x] Hardware - hardware assembly -  12/18/2017
   - [x] Hardware / Dev - hardware Test coding - 12/18/2017
   - [ ] Hardware / Dev - hardware coding & test to send data to Firebase database - 
+  - [x] Dev - update dependencies - 8/28/2018
   - [ ] Dev - website wire framing -
   - [ ] Dev - website coding - 
   - [ ] Dev - file and directory structure cleanup - 
