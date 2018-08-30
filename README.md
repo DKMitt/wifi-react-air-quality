@@ -5,7 +5,7 @@ A WiFi Air Quality App with Data Logging intended for indoor air quality monitor
 The WiFi Air Quality App uses an Adafruit CCS811 Air Quality Sensor to take readings in real time and then transmit the data wirelessly via WiFi with the Adafruit Feather HUZZAH ESP8266 WiFi Development Board to a Firebase real-time cloud database, and then displaying the results using a React.js website interface.
 
 
-__Project Status - In Process - Updated, 08/28/2018__
+__Project Status - In Process - Updated, 08/29/2018__
 
 ----
 
@@ -14,9 +14,10 @@ __Project Status - In Process - Updated, 08/28/2018__
   -  WiFi Air Quality App Description
   -  Features to Have 
   -  Hardware Used for Project
-  -  Schematic of Hardware Layout
+  -  Breadboard & Schematic Layouts
   -  Code Used for Programming Hardware
   -  Website Technologies 
+  -  The Build Process
   -  How to Use This App
   -  File and Directory Structure
   -  Revision History
@@ -47,37 +48,56 @@ __<u>Parts List</u>__
 - (1) Adafruit CCS811 Air Quality Sensor Breakout Board - VOC and eCO2  [Get @ Adafruit](https://www.adafruit.com/product/3566)
 - (1) 220K Ohm Resistor, 5%, 1/4 watt, Color code: Red, Red, Yellow, Gold
 - (1) 1M Ohm Resistor, 5%, 1/4 watt, Color code: Brown, Black, Green, Gold
-  ​
+- (1) SSD 1306 OLED Display, 0.96"  128x64
 
 
+------
 
-__<u>Breadboard Layout</u>__
+### Breadboard  & Schematic Layouts
+
+Description of the breadboard and schematic layouts used as going thru the build process.
+
+**ESP8266, CCS811 with Battery Divider Circuit** - 12/18/2017
+
+Adafruit Feather HUZZAH ESP8266 WiFi Board wired up with a Battery Divider Circuit and the Adafruit CCS811 Air Quality Sensor Breakout Board.
 
 ![WiFi Air Quality App Breadboard Layout](public/assets/img/esp8266-ccs811+batlev.jpg) 
 
-----
+![WiFi Air Quality App Schematic](C:/Users/Darryl/NCBC/GitHub/wifi-react-air-quality/public/assets/img/esp8266-ccs811+batlev-sch.jpg)
 
-### Schematic of Hardware Layout
+------
 
-![WiFi Air Quality App Schematic](public/assets/img/esp8266-ccs811+batlev-sch.jpg)
+**ESP8266, CCS811 & SSD1306 with Battery Divider Circuit** - 8/29/2018
+
+Adafruit Feather HUZZAH ESP8266 WiFi Board wired up with a Battery Divider Circuit and the Adafruit CCS811 Air Quality Sensor Breakout Board and a SSD1306 OLED Display.
+
+![WiFi Air Quality App Breadboard Layout](C:/Users/Darryl/NCBC/GitHub/wifi-react-air-quality/public/assets/img/ESP8266-CCS811-SSD1306-Battery-Divder-bb.png) 
+
+
+![WiFi Air Quality App Schematic using the ESP8266, CCS811 & SSD1306 with Battery Divider circuit](C:/Users/Darryl/NCBC/GitHub/wifi-react-air-quality/public/assets/img/ESP8266-CCS811-SSD1306-Battery-Divider-schem.png)
+
+
 
 ----
 
 ### Code Used for Programming Hardware
+
 Code used for programming the Adafruit Feather HUZZAH ESP8266 board is located in the directory  [feather_huzzah_esp8266_code](https://github.com/DKMitt/wifi-react-air-quality/tree/master/feather_huzzah_esp8266_code). 
 
 
 
 __<u>Definition of Code</u>__
 
-  * [esp8266_ccs811_test.ino](https://github.com/DKMitt/wifi-react-air-quality/blob/master/feather_huzzah_esp8266_code/esp8266_ccs811_test.ino)  -  Used to test hardware is setup correctly, sends data to serial monitor - Get code from within Arduino IDE by going to: __File->Examples->Adafruit_CCS811->CCS811_test__ 
+  * [esp8266_ccs811_test.ino](https://github.com/DKMitt/wifi-react-air-quality/blob/master/feather_huzzah_esp8266_code/esp8266_ccs811_test.ino)  -  Used to test the ESP8266 with the CCS811 without the Battery Divider Circuit to send data to the serial monitor - Get code from within Arduino IDE by going to:
+    __File->Examples->Adafruit_CCS811->CCS811_test__ 
 
     You should get the below output to your serial monitor
-    ​
-    ![Serail Monitor Output with Test Code](public/assets/img/ccs811-test-results-600.jpg)
-    ​
 
-  * [esp8266_ccs811.ino](https://github.com/DKMitt/wifi-react-air-quality/blob/master/feather_huzzah_esp8266_code/esp8266_ccs811.ino)  -  Used to test hardware and Firebase Database are setup correctly, sends data to serial monitor and to Firebase database - Incomplete - In Process of Coding 8/28/2018
+    ![Serail Monitor Output with Test Code](public/assets/img/ccs811-test-results-600.jpg)
+
+  * [esp8266_ccs811_ssd1306.ino](https://github.com/DKMitt/wifi-react-air-quality/blob/master/feather_huzzah_esp8266_code/esp8266_ccs811_ssd1306.ino)  -  Used to test the ESP8266 with the CCS811 and SSD1306 OLED 0.96" 128x64 Display without the Battery Divider Circuit - 8/29/2018
+
+  * [esp8266_ccs811.ino](https://github.com/DKMitt/wifi-react-air-quality/blob/master/feather_huzzah_esp8266_code/esp8266_ccs811.ino)  -  Used to test hardware and Firebase Database are setup correctly, sends data to serial monitor and to Firebase database - Incomplete - Not Coded as of yet
 
 
 
@@ -126,8 +146,21 @@ __<u>devDependencies</u>__
 
     react-scripts: ^1.1.5
 
-----
 
+
+------
+
+### The Build Process
+
+Description of how this project was started and the process of putting it together, this is not a tutorial.
+
+
+
+
+
+
+
+------
 
 ### How to Use This App
 
@@ -139,8 +172,8 @@ To start the app use the following command
 
   Open http://localhost:3000 to view it in the browser.
 
-----
 
+----
 
 ### File and Directory Structure
 
@@ -149,6 +182,8 @@ To start the app use the following command
 ├── feather_huzzah_esp8266_code
 │   │
 │   ├── esp8266_ccs811.ino
+│   │
+│   ├── esp8266_ccs811_ssd1306.ino
 │   │
 │   └── esp8266_ccs811_test.ino
 │ 
@@ -160,9 +195,13 @@ To start the app use the following command
 │   │       │
 │   │       ├── ccs811-test-results-600.jpg
 │   │       │
-│   │       ├── esp8266-ccs811+batlev.jpg ccs811-test-results-600.jpg
+│   │       ├── esp8266-ccs811+batlev.jpg
 │   │       │
-│   │       └── esp8266-ccs811+batlev-sch.jpg
+│   │       ├── esp8266-ccs811+batlev-sch.jpg
+│   │       │
+│   │       ├── ESP8266-CCS811-SSD1306-Battery-Divder-bb.png
+│   │       │
+│   │       └── ESP8266-CCS811-SSD1306-Battery-Divider-schem.png
 │   │
 │   ├── favicon.ico
 │   │
@@ -200,19 +239,23 @@ To start the app use the following command
 │
 └── README.md            
 ```
-----
+
+
+------
+
 ### Revision History 
 
-Description of revisions made to the app - __In Process, last updated 8/28/2018__
+Description of revisions made to the app - __In Process, last updated 8/29/2018__
 
-  - [x] Hardware / Dev - Breadboard Layout & Schematic - 8/26/2017  
-  - [x] Dev - file and directory structure creation  - 8/26/2017
+  - [x] Hardware / Dev - Breadboard layout & schematic - 8/26/2017  
+  - [x] Dev - File and directory structure creation  - 8/26/2017
   - [x] Dev - Firebase cloud database creation - 8/26/2017
-  - [x] Hardware - hardware assembly -  12/18/2017
-  - [x] Hardware / Dev - hardware Test coding - 12/18/2017
-  - [ ] Hardware / Dev - hardware coding & test to send data to Firebase database - 
-  - [x] Dev - update dependencies - 8/28/2018
-  - [ ] Dev - website wire framing -
-  - [ ] Dev - website coding - 
-  - [ ] Dev - file and directory structure cleanup - 
-  - [ ] Dev - final testing - 
+  - [x] Hardware - Hardware assembly - 12/18/2017
+  - [x] Hardware / Dev - Hardware test coding - ESP8266, CCS811 - 12/18/2017
+  - [x] Hardware / Dev - Hardware test coding - ESP8266, CCS811 & SSD1306 - 8/29/2018
+  - [ ] Hardware / Dev - Hardware coding & test to send data to Firebase database - 
+  - [x] Dev - Update dependencies - 8/28/2018
+  - [ ] Dev - Website wire framing -
+  - [ ] Dev - Website coding - 
+  - [ ] Dev - File and directory structure cleanup - 
+  - [ ] Dev - Final testing - 
