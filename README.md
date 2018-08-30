@@ -5,7 +5,7 @@ A WiFi Air Quality App with Data Logging intended for indoor air quality monitor
 The WiFi Air Quality App uses an Adafruit CCS811 Air Quality Sensor to take readings in real time and then transmit the data wirelessly via WiFi with the Adafruit Feather HUZZAH ESP8266 WiFi Development Board to a Firebase real-time cloud database, and then displaying the results using a React.js website interface.
 
 
-__Project Status - In Process - Updated, 08/29/2018__
+__Project Status - In Process - Updated, 08/30/2018__
 
 ----
 
@@ -49,7 +49,6 @@ __<u>Parts List</u>__
 - (1) 220K Ohm Resistor, 5%, 1/4 watt, Color code: Red, Red, Yellow, Gold
 - (1) 1M Ohm Resistor, 5%, 1/4 watt, Color code: Brown, Black, Green, Gold
 - (1) SSD 1306 OLED Display, 0.96"  128x64
-
 
 ------
 
@@ -97,6 +96,17 @@ __<u>Definition of Code</u>__
 
   * [esp8266_ccs811_ssd1306.ino](https://github.com/DKMitt/wifi-react-air-quality/blob/master/feather_huzzah_esp8266_code/esp8266_ccs811_ssd1306.ino)  -  Used to test the ESP8266 with the CCS811 and SSD1306 OLED 0.96" 128x64 Display without the Battery Divider Circuit - 8/29/2018
 
+  * [esp8266_ccs811_ssd1306_batmon.ino](https://github.com/DKMitt/wifi-react-air-quality/blob/master/feather_huzzah_esp8266_code/esp8266_ccs811_ssd1306_batmon.ino)  -  Used to test the ESP8266  with the Battery Divider Circuit, the CCS811 and the SSD1306 OLED 0.96" 128x64 Display - 8/30/2018
+
+    You should get something similar to the below Serial Monitor & SSD1306 OLED Display outputs
+
+    ![ESP8266 with the Battery Divider Circuit and CCS811 Serial Monitor Output](public/assets/img/ESP8266-CCS811-SSD1306-Battery-Divder-sm.jpg)
+
+
+![SSD1306 OLED Display Output](public/assets/img/ssd1306-readings.jpg)
+
+
+
   * [esp8266_ccs811.ino](https://github.com/DKMitt/wifi-react-air-quality/blob/master/feather_huzzah_esp8266_code/esp8266_ccs811.ino)  -  Used to test hardware and Firebase Database are setup correctly, sends data to serial monitor and to Firebase database - Incomplete - Not Coded as of yet
 
 
@@ -110,7 +120,6 @@ __<u>Source for Code & Wiring</u>__
 - [Download Adafruit_CCS811 library](https://learn.adafruit.com/adafruit-ccs811-air-quality-sensor?view=all#download-adafruit-ccs811-library) - To begin reading sensor data, you will need to download Adafruit_CCS811 library, read more on how to do that here and download link.
 - [Adafruit_feather HUZZAH ESP8266 Overview](https://learn.adafruit.com/adafruit-feather-huzzah-esp8266/pinouts?view=all#overview) - Covers working with the Adafruit feather HUZZAH ESP8266, pinout, wiring, programing, the battery voltage divider used here and more.
 - [Using Arduino IDE to Program the Adafruit_feather HUZZAH ESP8266](https://learn.adafruit.com/adafruit-feather-huzzah-esp8266/pinouts?view=all#using-arduino-ide) - How to program the Adafruit feather HUZZAH ESP8266
-
 
 ----
 
@@ -172,7 +181,6 @@ To start the app use the following command
 
   Open http://localhost:3000 to view it in the browser.
 
-
 ----
 
 ### File and Directory Structure
@@ -184,6 +192,8 @@ To start the app use the following command
 │   ├── esp8266_ccs811.ino
 │   │
 │   ├── esp8266_ccs811_ssd1306.ino
+│   │
+│   ├── esp8266_ccs811_ssd1306_batmon.ino
 │   │
 │   └── esp8266_ccs811_test.ino
 │ 
@@ -201,7 +211,11 @@ To start the app use the following command
 │   │       │
 │   │       ├── ESP8266-CCS811-SSD1306-Battery-Divder-bb.png
 │   │       │
-│   │       └── ESP8266-CCS811-SSD1306-Battery-Divider-schem.png
+│   │       ├── ESP8266-CCS811-SSD1306-Battery-Divder-sm.jpg
+│   │       │
+│   │       ├── ESP8266-CCS811-SSD1306-Battery-Divider-schem.png
+│   │       │
+│   │       └── ssd1306-readings.jpg
 │   │
 │   ├── favicon.ico
 │   │
@@ -240,19 +254,19 @@ To start the app use the following command
 └── README.md            
 ```
 
-
 ------
 
 ### Revision History 
 
-Description of revisions made to the app - __In Process, last updated 8/29/2018__
+Description of revisions made to the app - __In Process, last updated 8/30/2018__
 
   - [x] Hardware / Dev - Breadboard layout & schematic - 8/26/2017  
   - [x] Dev - File and directory structure creation  - 8/26/2017
   - [x] Dev - Firebase cloud database creation - 8/26/2017
   - [x] Hardware - Hardware assembly - 12/18/2017
-  - [x] Hardware / Dev - Hardware test coding - ESP8266, CCS811 - 12/18/2017
-  - [x] Hardware / Dev - Hardware test coding - ESP8266, CCS811 & SSD1306 - 8/29/2018
+  - [x] Hardware / Dev - Hardware coding - ESP8266, CCS811 - 12/18/2017
+  - [x] Hardware / Dev - Hardware coding - ESP8266, CCS811 & SSD1306 - 8/29/2018
+  - [x] Hardware / Dev - Hardware coding - ESP8266 with Battery Divider Circuit, CCS811 & SSD1306 - 8/30/2018
   - [ ] Hardware / Dev - Hardware coding & test to send data to Firebase database - 
   - [x] Dev - Update dependencies - 8/28/2018
   - [ ] Dev - Website wire framing -
