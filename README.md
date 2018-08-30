@@ -63,7 +63,7 @@ Adafruit Feather HUZZAH ESP8266 WiFi Board wired up with a Battery Divider Circu
 
 ![WiFi Air Quality App Breadboard Layout](public/assets/img/esp8266-ccs811+batlev.jpg) 
 
-![WiFi Air Quality App Schematic](C:/Users/Darryl/NCBC/GitHub/wifi-react-air-quality/public/assets/img/esp8266-ccs811+batlev-sch.jpg)
+![WiFi Air Quality App Schematic](public/assets/img/esp8266-ccs811+batlev-sch.jpg)
 
 ------
 
@@ -71,10 +71,10 @@ Adafruit Feather HUZZAH ESP8266 WiFi Board wired up with a Battery Divider Circu
 
 Adafruit Feather HUZZAH ESP8266 WiFi Board wired up with a Battery Divider Circuit and the Adafruit CCS811 Air Quality Sensor Breakout Board and a SSD1306 OLED Display.
 
-![WiFi Air Quality App Breadboard Layout](C:/Users/Darryl/NCBC/GitHub/wifi-react-air-quality/public/assets/img/ESP8266-CCS811-SSD1306-Battery-Divder-bb.png) 
+![WiFi Air Quality App Breadboard Layout](public/assets/img/ESP8266-CCS811-SSD1306-Battery-Divder-bb.png) 
 
 
-![WiFi Air Quality App Schematic using the ESP8266, CCS811 & SSD1306 with Battery Divider circuit](C:/Users/Darryl/NCBC/GitHub/wifi-react-air-quality/public/assets/img/ESP8266-CCS811-SSD1306-Battery-Divider-schem.png)
+![WiFi Air Quality App Schematic using the ESP8266, CCS811 & SSD1306 with Battery Divider circuit](public/assets/img/ESP8266-CCS811-SSD1306-Battery-Divider-schem.png)
 
 
 
