@@ -5,7 +5,7 @@ A WiFi Air Quality App with Data Logging intended for indoor air quality monitor
 The WiFi Air Quality App uses an Adafruit CCS811 Air Quality Sensor to take readings in real time and then transmit the data wirelessly via WiFi with the Adafruit Feather HUZZAH ESP8266 WiFi Development Board to a Firebase real-time cloud database, and then displaying the results using a React.js website interface.
 
 
-__Project Status - In Process - Updated, 08/30/2018__
+__Project Status - In Process - Updated, 9/4/2018__
 
 ----
 
@@ -49,6 +49,27 @@ __<u>Parts List</u>__
 - (1) 220K Ohm Resistor, 5%, 1/4 watt, Color code: Red, Red, Yellow, Gold
 - (1) 1M Ohm Resistor, 5%, 1/4 watt, Color code: Brown, Black, Green, Gold
 - (1) SSD 1306 OLED Display, 0.96"  128x64
+
+
+
+**Please Note:  Sensor Issue with Adafruit CCS811 Air Quality Sensor Breakout Board**
+
+I found an issue while working with the Adafruit CCS811 Sensor that after running for about 15 - 20 minutes the sensor would cause an ERROR and would need to have the ESP8266 rebooted and then it would go back to working until the next crash.
+
+It seems that the CCS811 has clock stretching, which the ESP8266 supports *somewhat*. You can try adjusting the clock stretch timeout or you can try using the SGP30 which is a similar sensor but without the clock stretch issue.
+
+**I was able to fix the problem** by changing the clock stretching setting from being 230 to 460, try what works best for you. I plan on changing out this sensor for the SGP30 or similar to see how it works compared to the CCS811 at some point.
+
+The setting that i changed and worked for me:   twi_setClockStretchLimit(230);  // default value is 230 uS
+
+**Original Settings:**   twi_setClockStretchLimit(230);  // default value is 230 uS
+
+**Changed Settings:**   twi_setClockStretchLimit(460);  // default value is 230 uS
+
+Additional information on Clock Stretching can be found by going to the below URL
+[https://www.instructables.com/id/SparkFun-ESP8266-Thing-With-CCS811and-BME280-I2C-T/](https://www.instructables.com/id/SparkFun-ESP8266-Thing-With-CCS811and-BME280-I2C-T/)
+
+
 
 ------
 
@@ -103,7 +124,7 @@ __<u>Definition of Code</u>__
     ![ESP8266 with the Battery Divider Circuit and CCS811 Serial Monitor Output](public/assets/img/ESP8266-CCS811-SSD1306-Battery-Divder-sm.jpg)
 
 
-![SSD1306 OLED Display Output](public/assets/img/ssd1306-readings.jpg)
+    ![SSD1306 OLED Display Output](public/assets/img/ssd1306-readings.jpg)
 
 
 
@@ -258,7 +279,7 @@ To start the app use the following command
 
 ### Revision History 
 
-Description of revisions made to the app - __In Process, last updated 8/30/2018__
+Description of revisions made to the app - __In Process, last updated 9/04/2018__
 
   - [x] Hardware / Dev - Breadboard layout & schematic - 8/26/2017  
   - [x] Dev - File and directory structure creation  - 8/26/2017
@@ -267,6 +288,7 @@ Description of revisions made to the app - __In Process, last updated 8/30/2018_
   - [x] Hardware / Dev - Hardware coding - ESP8266, CCS811 - 12/18/2017
   - [x] Hardware / Dev - Hardware coding - ESP8266, CCS811 & SSD1306 - 8/29/2018
   - [x] Hardware / Dev - Hardware coding - ESP8266 with Battery Divider Circuit, CCS811 & SSD1306 - 8/30/2018
+  - [x] Hardware / Dev - Adafruit CCS811 Crashing Issue Resolved Information - 9/4/2018
   - [ ] Hardware / Dev - Hardware coding & test to send data to Firebase database - 
   - [x] Dev - Update dependencies - 8/28/2018
   - [ ] Dev - Website wire framing -
